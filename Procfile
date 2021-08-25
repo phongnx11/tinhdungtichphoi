@@ -1,0 +1,1 @@
+web: gunicorn tinhthetichphoi.wsgi --log-file -

@@ -1,0 +1,29 @@
+{% extends "base.html"%}
+
+    {% block content %}
+
+{% if messages %}
+
+                        {% for message in messages %}
+                        <div class="alert alert-info">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+
+                    {% endif %}
+    <div class="global-container">
+        <div class="card login-form">
+        <div class="card-body">
+            <h3 class="card-title text-center">Welcome, User {{request.user.username}}</h3>
+            <a href="{% url 'dangxuat' %}">Logout</a>
+            <a href="{% url 'password_change' %}">Change Password</a>
+            <a href="{% url 'myfile' %}">Uploadfile</a>
+
+          
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+    {% endblock %}
